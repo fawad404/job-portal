@@ -12,7 +12,7 @@ const itemsPerPage = 4;
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(`http://localhost:3000/myJobs/fawadanxari31@gmail.com`).then(res => res.json()).then(data => {
+        fetch(`https://job-portal-backend-theta.vercel.app/myJobs/fawadanxari31@gmail.com`).then(res => res.json()).then(data => {
           setJobs(data);
           setIsLoading(false);
         });
@@ -46,7 +46,7 @@ const itemsPerPage = 4;
 
     const handleDelete = (id) => {
       // console.log(id);
-      fetch(`http://localhost:3000/job/${id}`, {
+      fetch(`https://job-portal-backend-theta.vercel.app/job/${id}`, {
        method: "DELETE"
       })
       .then((res) => res.json)
